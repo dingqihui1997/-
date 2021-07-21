@@ -1,0 +1,11 @@
+<view>
+    <view class="top">{{title}}</view>
+    <view class="content">
+        <view wx:for="{{male}}" wx:key="index" bindtap="goto" data-item="{{item}}" data-index="{{index}}">
+            <view class="one">
+                <view>{{item.name}}</view>
+                <view class="Count">{{item.bookCount+'本'}}</view>
+            </view>
+        </view>
+    </view>
+</view>

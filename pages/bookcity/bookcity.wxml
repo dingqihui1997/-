@@ -1,0 +1,20 @@
+<view class="top flex-ja">
+    <view class="flex1 flex-ja" bindtap="click" data-index="0">
+        <view class="nav {{index==0? 'navred':''}}">分类</view>
+    </view>
+    <view class="flex1 flex-ja" bindtap="click" data-index="1">
+        <view class="nav {{index==1? 'navred':''}}">排行</view>
+    </view>
+</view>
+<view class="zhanw"></view>
+<view>
+    <view wx:if="{{index==0}}">
+        <classification male='{{male}}' wx:if="{{male.length>0}}" title='男生'></classification>
+        <classification male='{{female}}' wx:if="{{female.length>0}}" title='女生'></classification>
+        <classification male='{{press}}' wx:if="{{press.length>0}}" title='出版'></classification>
+    </view>
+    <view wx:else>
+        <ranking boy='{{boy}}' wx:if="{{boy.length>0}}" title='男生'></ranking>
+        <ranking boy='{{girl}}' wx:if="{{girl.length>0}}" title='女生'></ranking>
+    </view>
+</view>

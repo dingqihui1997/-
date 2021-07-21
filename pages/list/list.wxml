@@ -1,0 +1,9 @@
+<view class="box flex-a" wx:if="{{indexes!==1&& indexes!==2}}">
+    <view wx:for="{{list}}" wx:key="index" class="flex1 hei100 flex-ja" bindtap="click" data-index="{{index}}">
+        <view class="time flex-ja {{activeindex===index?'red':''}}">{{item.name}}</view>
+    </view>
+</view>
+<view class="zhanw" wx:if="{{indexes!==1&& indexes!==2}}"></view>
+<view>
+    <week book="{{book}}" wx:if="{{book.length>0}}"></week>
+</view>

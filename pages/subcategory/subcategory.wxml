@@ -1,0 +1,35 @@
+<!-- 分类跳转后的页面 -->
+<view class="fixed">
+    <view class="flex-a top">
+        <view wx:for="{{typeList}}" wx:key="index" class="one {{topindex==index?'red' :''}}" bindtap="click"
+            data-index="{{index}}" data-item="{{item}}">{{item.name}}</view>
+    </view>
+    <scroll-view scroll-x="true" class="scroll" style="width:100%">
+        <view class="flex-a top" wx:if="{{catalogue.length>0}}">
+            <view wx:for="{{catalogue}}" wx:key="index" class="one {{misindex==index?'red' :''}}" bindtap="minor"
+                data-index="{{index}}" data-item="{{item}}">{{item}}</view>
+        </view>
+    </scroll-view>
+</view>
+<view class="zhanw"></view>
+<view>
+    <view wx:for="{{books}}" wx:key="index" data-item="{{item}}" class="box1" wx:if="{{books.length>0}}" bindtap="goto">
+        <view class="img">
+            <image src="{{url+item.cover}}" class="image"></image>
+        </view>
+        <view class="right">
+            <view class="title">{{item.title}}</view>
+            <view class="author"> {{item.author}}</view>
+            <view class="shortIntro">{{item.shortIntro}}</view>
+            <view class="flex-a label">
+                <view class="tags tag" wx:if="{{item.tags[0]}}">{{item.tags[0]}}</view>
+                <view class="tags1 tag" wx:if="{{item.tags[1]}}">{{item.tags[1]}}</view>
+                <view class="tags2 tag" wx:if="{{item.tags[2]}}">{{item.tags[2]}}</view>
+            </view>
+        </view>
+
+    </view>
+    <view wx:if="{{books.length===0}}" class="book flex-ja">
+        暂无书籍
+    </view>
+</view>

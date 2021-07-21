@@ -1,0 +1,23 @@
+.top {
+    height: 80rpx;
+    width: 100%;
+    position: fixed;
+    background-color: #eeeeee;
+}
+
+.zhanw {
+    height: 80rpx;
+    width: 100%;
+}
+
+.nav {
+    width: 80rpx;
+    text-align: center;
+    padding-top: 15rpx;
+    padding-bottom: 15rpx;
+}
+
+.navred {
+    border-bottom: 2px #DE022B solid;
+    color: #DE022B;
+}

@@ -1,0 +1,67 @@
+<view class="box1">
+    <view class="top">
+    </view>
+    <view class="img flex-ja">
+        <image src="{{url+details.cover}}" class="image" wx:if="{{details.cover}}" bindtap="picture"></image>
+    </view>
+    <view class="box flex-di">
+        <view class="title"> {{details.title}} </view>
+        <view class="author">{{details.author}}</view>
+        <view class="flex-sb but">
+            <view class="agin">开始阅读</view>
+            <view class="book" bindtap="collection">{{text?"已加入书架":"加入书架"}}</view>
+        </view>
+    </view>
+</view>
+<view class="stars flex-di">
+    <view class="star flex-ja">
+        <image src="../../assets/star.png" class="mark" wx:for="{{score}}" wx:key="index"></image>
+        <image src="../../assets/activestar.png" class="mark" wx:for="{{5-score}}" wx:key="index"></image>
+    </view>
+    <view class="load">更新至<text class="span">{{details.lastChapter}}</text></view>
+</view>
+<view class="details">
+    <view class="head flex-ja">
+        <view class="flex1 flex-ja" wx:for="{{list}}" wx:key="index" data-index="{{index}}" bindtap="click">
+            <view class="{{navindex===index?'nav':''}}">{{index===1?item+total:item}}</view>
+        </view>
+    </view>
+    <scroll-view scroll-y="true" class="scroll" bindscrolltolower="tolower">
+        <!-- 详情 -->
+        <view class="boay" wx:if="{{navindex===0}}">
+            <view class="shortIntro"><text>简介：</text>{{details.longIntro}}</view>
+            <view class="catalogue flex-ja">总目录({{details.chaptersCount}})</view>
+            <view class="relevant flex-sb">
+                <view class="flex-ja">看过这本书的人还在看</view>
+                <view class="flex-ja" bindtap="change">
+                    <view>
+                        <image src="../../assets/xunhuan.png" class="img1001"></image>
+                    </view>
+                    <view>换一换</view>
+                </view>
+            </view>
+            <view class="flex-a">
+                <view wx:for="{{three}}" wx:key="index" class="flex1 picture" bindtap="see" data-item="{{item}}">
+                    <view class="cover">
+                        <image src="{{url+item.cover}}" class="img100"></image>
+                    </view>
+                    <view class="flex-ja font14 recomtitle">{{item.title}}</view>
+                </view>
+            </view>
+        </view>
+        <!-- 评价 -->
+        <view wx:if="{{navindex===1}}">
+            <view wx:for="{{reviews}}" wx:key="index" class="reviews flex-a">
+                <image src="{{url+item.author.avatar}}" class="avatar"></image>
+                <view class="name">
+                    <view class="nickname">{{item.author.nickname}}</view>
+                    <view class="content">{{item.content}}</view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>
+<!-- 查看图片详情 -->
+<view class="layer" wx:if="{{flag}}" bindtap="cancel">
+    <image src="{{url+details.cover}}" class="layercover middlecenter" bindlongpress="press"></image>
+</view>

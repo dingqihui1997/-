@@ -1,0 +1,12 @@
+<!-- 周榜 -->
+<view wx:for="{{book}}" wx:key="index" data-item="{{item}}" class="box" bindtap="goto">
+    <view class="img">
+        <image src="{{url+item.cover}}" class="image"></image>
+    </view>
+    <view class="right">
+        <view class="title">{{item.title}}</view>
+        <view class="author"> {{item.author}}</view>
+        <view class="shortIntro">{{item.shortIntro}}</view>
+    </view>
+
+</view>

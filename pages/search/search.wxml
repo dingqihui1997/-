@@ -1,0 +1,41 @@
+<view class="box">
+    <view class="top flex-ja"> <input type="text" placeholder="请输入书名和用户名" class="ipt" bindconfirm="search"
+            bindinput="ipt" confirm-type='search' value="{{value}}" />
+        <image src="../../assets/sous.png" class="img" wx:if="{{!del}}"></image>
+        <image src="../../assets/del.png" class="del" bindtap="del" wx:if="{{del}}"></image>
+    </view>
+</view>
+<view class="zhanw"></view>
+<!-- 热词榜 -->
+<view wx:if="{{flag}}">
+    <view class="flex-sba head">
+        <view>大家都在搜</view>
+        <view class="flex-a color" bindtap="lang">
+            <view>
+                <image src="../../assets/hyh.png" class="hyh"> 换一换</image>
+            </view>
+            <view>换一换</view>
+        </view>
+    </view>
+    <view class="flex-w hotWords">
+        <view style="background:{{rgba[index]}}" wx:for="{{arr}}" wx:key="index" class="work" data-item="{{item}}"
+            bindtap="click">
+            {{item.word}}</view>
+    </view>
+    <view class="flex-sb head">
+        <view>搜索历史</view>
+        <view class="flex-a color" bindtap="empty">
+            <view>
+                <image src="../../assets/del1.png" class="empty"> </image>
+            </view>
+            <view>清空</view>
+        </view>
+    </view>
+    <view class="history" wx:for="{{history}}" wx:key="index" data-item="{{item}}" bindtap="history">{{item.name}}
+    </view>
+</view>
+<view wx:else>
+    <!-- <scroll-view scroll-y="true" class="scroll" bindscrolltolower="sroll"> -->
+    <keyword book="{{book}}"></keyword>
+    <!-- </scroll-view> -->
+</view>

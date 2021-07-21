@@ -1,0 +1,30 @@
+.top {
+    height: 100rpx;
+    width: 100%;
+    padding-left: 10rpx;
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.one {
+    width: 250rpx;
+    height: 120rpx;
+    border: 1px #eee solid;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Count {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #666;
+}

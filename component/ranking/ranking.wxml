@@ -1,0 +1,9 @@
+<view>
+    <view class="top">{{title}}</view>
+    <view wx:for="{{boy}}" wx:key="index" class="boy" bindtap="click1" data-item="{{item}}" data-index="{{index}}">
+        <view class="img">
+            <image src="{{url+item.cover}}" class="image"></image>
+        </view>
+        <view>{{item.title}}</view>
+    </view>
+</view>

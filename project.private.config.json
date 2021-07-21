@@ -1,0 +1,66 @@
+{
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "pages/help/help",
+                    "pathName": "pages/help/help",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/bookcity/bookcity",
+                    "pathName": "pages/bookcity/bookcity",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/subcategory/subcategory",
+                    "pathName": "pages/subcategory/subcategory",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/list/list",
+                    "pathName": "pages/list/list",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/subcategory/subcategory",
+                    "pathName": "pages/subcategory/subcategory",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/details/details",
+                    "pathName": "pages/details/details",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/bookshelf/bookshelf",
+                    "pathName": "pages/bookshelf/bookshelf",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/search/search",
+                    "pathName": "pages/search/search",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

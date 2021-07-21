@@ -1,0 +1,52 @@
+.book {
+    width: 95%;
+    height: 350rpx;
+    border-bottom: 1px solid #eee;
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.img {
+    width: 210rpx;
+    height: 290rpx;
+    margin-left: 10rpx;
+    margin-right: 20rpx;
+}
+
+.title {
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+}
+
+.author {
+    font-size: 12px;
+    margin-bottom: 20rpx;
+    color: #666;
+
+}
+
+.shortIntro {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    color: #666;
+}
+
+.lately {
+    margin-top: 10rpx;
+    color: #FF6347;
+}
+
+.none {
+    width: 100%;
+    height: 400rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

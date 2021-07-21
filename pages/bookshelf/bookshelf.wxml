@@ -1,0 +1,32 @@
+<!-- 头部 -->
+<view class="top flex-sb">
+    <view class="left flex-a" wx:if="{{flag}}" bindtap="choice">
+        <image src="../../assets/eide.png" class="img100"></image>
+    </view>
+    <view class="left flex-a" wx:else>
+        <image src="../../assets/goug.png" class="img100" bindtap="choice"></image>
+    </view>
+    <view class="flex-a right">
+        <view class="help" bindtap="goto">帮助</view>
+        <view class="Refresh flex-ja">
+            <image src="../../assets/quan.png"></image>
+        </view>
+    </view>
+</view>
+<!--  内容 -->
+<view class="content flex-ja" wx:if="{{book.length===0}}">主人还没有收藏书籍哦，请去书城收藏吧!</view>
+<view wx:else class="flex-w collection">
+    <view wx:for="{{book}}" wx:key="index" class="single" data-item="{{item}}" data-index="{{index}}" bindtap="see">
+        <view>
+            <image src="{{url+item.cover}}" class="images {{flag?'':'move'}}"></image>
+        </view>
+        <view class="title">{{item.title}}</view>
+        <view class="read">读到第一章</view>
+        <view wx:if="{{bur}}">
+            <image src="../../assets/del.png" class="del img100" catchtap="del" data-item="{{item}}"
+                data-index="{{index}}">
+            </image>
+        </view>
+    </view>
+
+</view>

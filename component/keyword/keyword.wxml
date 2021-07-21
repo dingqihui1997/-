@@ -1,0 +1,16 @@
+<!-- 搜索详情 -->
+<view>
+    <view wx:if="{{book.length>0}}" wx:for="{{book}}" class="book flex-a" wx:key="index" bindtap="goto"
+        data-index="{{item}}">
+        <view>
+            <image src="{{url+item.cover}}" class="img100" class="img"></image>
+        </view>
+        <view>
+            <view class="title">{{item.title}}</view>
+            <view class="author">{{item.author}}</view>
+            <view class="shortIntro">{{item.shortIntro}}</view>
+            <view class="lately">最近收藏{{item.latelyFollower}}</view>
+        </view>
+    </view>
+    <view wx:if="{{book.length==0}}" class="none">暂无书籍</view>
+</view>
